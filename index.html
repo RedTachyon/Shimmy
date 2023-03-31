@@ -11,11 +11,11 @@
 <link rel="index" title="Index" href="genindex/" /><link rel="search" title="Search" href="search/" /><link rel="next" title="&lt;no title&gt;" href="contents/" />
         <link rel="canonical" href="https://shimmy.farama.org/index.html" />
 
-    <link rel="shortcut icon" href="_static/shimmy.svg"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
+    <link rel="shortcut icon" href="_static/shimmy.svg"/><!-- Generated with Sphinx 5.2.3 and Furo 2022.12.07.dev1 -->
         <title>Shimmy Documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=c36209c3579494d5f9512671edd8cd731f7c406c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=57f753f2a36df4cd87bf0e4232aabc9b3cc73912" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=721f65a87c37740baa8d605b09db5bec3a2987a8" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=b0c92cd440df7c18a0306b0433406327ff2c572f" />
     
     
 
@@ -77,7 +77,7 @@
         <div class="farama-header__right">
           <div class="farama-header-menu">
             <button class="farama-header-menu__btn" aria-label="Open Farama Menu" aria-expanded="false" aria-haspopup="true" aria-controls="farama-menu">
-              <img class="farama-white-logo-invert" src="_static/img/farama-logo-header.svg">
+              <img class="farama-black-logo-invert" src="_static/img/farama-logo-header.svg">
               <svg viewBox="0 0 24 24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <polyline style="stroke-linecap: round; stroke-linejoin: round; fill: none; stroke-width: 2px;" points="1 7 12 18 23 7"></polyline>
               </svg>
@@ -217,7 +217,7 @@
       <img class="farama-header__logo only-dark" src="_static/img/shimmy-white.svg" alt="Dark Logo"/>
     <span class="farama-header__title">Shimmy Documentation</span>
   </a><form class="sidebar-search-container" method="get" action="search/" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -226,9 +226,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contents/gym/">OpenAI Gym</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/atari/">Atari Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contents/dm_control/">DM Control (both single and multiagent environments)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contents/open_spiel/">OpenSpiel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/dm_control/">DM Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/dm_multi/">DM Control (multi-agent)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/open_spiel/">OpenSpiel (multi-agent)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contents/dm_lab/">DM Lab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/bsuite/">Behavior Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/meltingpot/">Melting Pot (multi-agent)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
@@ -258,19 +261,8 @@
             <span>Back to top</span>
           </a>
           <div class="content-icon-container">
-            
-    
-    <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/Farama-Foundation/Shimmy/edit/main/docs/index.md" title="Edit this page">
-    <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
-      <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
-    </svg>
-    <span class="visually-hidden">Edit this page</span>
-  </a>
-</div><div class="theme-toggle-container theme-toggle-content">
-              <button class="theme-toggle">
+            <div class="theme-toggle-container theme-toggle-content">
+              <button class="theme-toggle" title="Toggle color theme">
                 <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
                 <svg class="theme-icon-when-auto">
                   <use href="#svg-sun-half"></use>
@@ -294,50 +286,57 @@
             
             <section id="shimmy-is-an-api-conversion-tool-for-popular-external-reinforcement-learning-environments-to-gymnasium-and-pettingzoo-apis">
 <h1>Shimmy is an API conversion tool for popular external reinforcement learning environments to <a class="reference external" href="https://github.com/farama-Foundation/gymnasium">Gymnasium</a> and <a class="reference external" href="https://github.com/farama-Foundation/pettingZoo/">PettingZoo</a> APIs.<a class="headerlink" href="#shimmy-is-an-api-conversion-tool-for-popular-external-reinforcement-learning-environments-to-gymnasium-and-pettingzoo-apis" title="Permalink to this heading">#</a></h1>
-<figure class="align-default">
-<a class="reference internal image-reference" href="_images/shimmy-white.svg"><img alt="Shimmy Logo" src="_images/shimmy-white.svg" width="200" /></a>
+<figure class="align-default" id="dm-lab">
+<a class="reference internal image-reference" href="_images/dm_lab.gif"><img alt="DeepMind Lab" src="_images/dm_lab.gif" style="width: 80%;" /></a>
 </figure>
 <section id="supported-apis">
 <h2>Supported APIs<a class="headerlink" href="#supported-apis" title="Permalink to this heading">#</a></h2>
 <section id="openai-gym">
-<h3>OpenAI Gym<a class="headerlink" href="#openai-gym" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="http://shimmy.farama.org/contents/gym/">OpenAI Gym</a><a class="headerlink" href="#openai-gym" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Bindings to convert OpenAI Gym environments to Gymnasium Environments.</p></li>
+<li><p>Bindings to convert <a class="reference external" href="https://github.com/openai/gym">OpenAI Gym</a> environments to <a class="reference external" href="https://gymnasium.farama.org/">Gymnasium</a>.</p></li>
 </ul>
 </section>
 <section id="atari-environments-for-openai-gym">
-<h3>Atari Environments for OpenAI Gym<a class="headerlink" href="#atari-environments-for-openai-gym" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="http://shimmy.farama.org/contents/atari/">Atari Environments for OpenAI Gym</a><a class="headerlink" href="#atari-environments-for-openai-gym" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Bindings to ALE-py to provide Atari environments in Gymnasium.</p></li>
+<li><p>Bindings to convert <a class="reference external" href="https://github.com/mgbellemare/Arcade-Learning-Environment">ALE-py</a> Atari environments to <a class="reference external" href="https://gymnasium.farama.org/">Gymnasium</a>.</p></li>
 </ul>
 </section>
 <section id="deepmind-control">
-<h3><a class="reference external" href="https://github.com/deepmind/dm_control">DeepMind Control</a><a class="headerlink" href="#deepmind-control" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="http://shimmy.farama.org/contents/dm_control/">DeepMind Control</a><a class="headerlink" href="#deepmind-control" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Gymnasium bindings for single agent environments.</p></li>
-<li><p>Pettingzoo bindings for multiagent soccer environments.</p></li>
+<li><p>Bindings to convert <a class="reference external" href="https://github.com/deepmind/dm_control/">DM Control</a> environments to <a class="reference external" href="https://gymnasium.farama.org/">Gymnasium</a>.</p></li>
+</ul>
+</section>
+<section id="deepmind-control-multi-agent">
+<h3><a class="reference external" href="http://shimmy.farama.org/contents/dm_multi/">DeepMind Control: Multi-Agent</a><a class="headerlink" href="#deepmind-control-multi-agent" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Bindings to convert <a class="reference external" href="https://github.com/deepmind/dm_control/blob/main/dm_control/locomotion/soccer/README.md">DM Control Soccer</a> environments to <a class="reference external" href="https://pettingzoo.farama.org/">PettingZoo</a>.</p></li>
 </ul>
 </section>
 <section id="dmlab">
-<h3><a class="reference external" href="https://github.com/deepmind/lab">DMLab</a><a class="headerlink" href="#dmlab" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference external" href="http://shimmy.farama.org/contents/dm_lab/">DMLab</a><a class="headerlink" href="#dmlab" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Pettingzoo bindings for all environments.</p></li>
+<li><p>Bindings to convert all <a class="reference external" href="https://github.com/deepmind/lab">DM Lab</a> environments to <a class="reference external" href="https://pettingzoo.farama.org/">PettingZoo</a>.</p></li>
 </ul>
 </section>
 <section id="openspiel">
-<h3><a class="reference external" href="https://github.com/deepmind/open_spiel">OpenSpiel</a><a class="headerlink" href="#openspiel" title="Permalink to this heading">#</a></h3>
+<h3><a class="reference internal" href="#shimmy.farama.org/contents/open_spiel/"><span class="xref myst">OpenSpiel</span></a><a class="headerlink" href="#openspiel" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Pettingzoo bindings for all environments.</p></li>
+<li><p>Bindings to convert all <a class="reference external" href="https://github.com/deepmind/open_spiel">OpenSpiel</a> enviromnets to <a class="reference external" href="https://pettingzoo.farama.org/">PettingZoo</a>.</p></li>
 </ul>
 </section>
-<section id="incoming-projects">
-<h3>Incoming Projects<a class="headerlink" href="#incoming-projects" title="Permalink to this heading">#</a></h3>
-<p>The following are a list of existing environment suites that we are looking into bringing into Shimmy.
-We are actively looking for developers to contribute to this project, if you are interested in helping, please reach out to us.</p>
+<section id="behavior-suite">
+<h3><a class="reference external" href="http://shimmy.farama.org/contents/bsuite/">Behavior Suite</a><a class="headerlink" href="#behavior-suite" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/deepmind/dm_env">The DeepMing Env API</a></p></li>
-<li><p><a class="reference external" href="https://github.com/deepmind/bsuite">Behaviour Suite</a></p></li>
-<li><p><a class="reference external" href="https://github.com/deepmind/meltingpot">Melting Pot</a></p></li>
+<li><p>Bindings to convert all <a class="reference external" href="https://github.com/deepmind/bsuite">Behavior Suite</a> environments to <a class="reference external" href="https://gymnasium.farama.org/">Gymnasium</a>.</p></li>
+</ul>
+</section>
+<section id="melting-pot">
+<h3><a class="reference external" href="http://shimmy.farama.org/contents/meltingpot/">Melting Pot</a><a class="headerlink" href="#melting-pot" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Bindings to convert all <a class="reference external" href="https://github.com/deepmind/meltingpot">Melting Pot</a> environments to <a class="reference external" href="https://pettingzoo.farama.org/">PettingZoo</a>.</p></li>
 </ul>
 </section>
 </section>
@@ -348,16 +347,19 @@ We are actively looking for developers to contribute to this project, if you are
 </pre></div>
 </div>
 <p>Out of the box, Shimmy doesn’t install any of the dependencies required for the environments it supports.
-To install them, you’ll have to install the optional extras.
-All single agent environments have registration under the Gymnasium API, while all multiagent environments must be wrapped using the corresponding compatibility wrappers.</p>
-<section id="id1">
-<h3>OpenAI Gym<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<section id="installation">
-<h4>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">gym</span><span class="p">]</span>
+To install them, you’ll have to install the optional extras (e.g., <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">shimmy[dm_lab]</span></code>).</p>
+<p>All single agent environments have registration under the <a class="reference external" href="https://gymnasium.farama.org/api/registry/">Gymnasium API</a>, while all multiagent environments must be wrapped using the corresponding compatibility wrappers.</p>
+<section id="for-developers-and-testing-only">
+<h3>For Developers and Testing Only<a class="headerlink" href="#for-developers-and-testing-only" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="n">testing</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
+<section id="to-just-install-everything">
+<h3>To just install everything<a class="headerlink" href="#to-just-install-everything" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">shimmy</span><span class="p">[</span><span class="nb">all</span><span class="p">,</span> <span class="n">testing</span><span class="p">]</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section id="at-a-glance">
@@ -391,7 +393,13 @@ dm_control/acrobot-swingup-v0
 <section id="citation">
 <h2>Citation<a class="headerlink" href="#citation" title="Permalink to this heading">#</a></h2>
 <p>If you use this in your research, please cite:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TBD</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@software</span><span class="p">{</span><span class="n">shimmy2022github</span><span class="p">,</span>
+  <span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">Jordan</span> <span class="n">Terry</span><span class="p">,</span> <span class="n">Mark</span> <span class="n">Towers</span><span class="p">,</span> <span class="n">Jun</span> <span class="n">Jet</span> <span class="n">Tai</span><span class="p">},</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">Shimmy</span><span class="p">:</span> <span class="n">Gymnasium</span> <span class="ow">and</span> <span class="n">Pettingzoo</span> <span class="n">Wrappers</span> <span class="k">for</span> <span class="n">Commonly</span> <span class="n">Used</span> <span class="n">Environments</span><span class="p">},</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="p">{</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Farama</span><span class="o">-</span><span class="n">Foundation</span><span class="o">/</span><span class="n">Shimmy</span><span class="p">},</span>
+  <span class="n">version</span> <span class="o">=</span> <span class="p">{</span><span class="mf">0.2.0</span><span class="p">},</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2022</span><span class="p">},</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">
