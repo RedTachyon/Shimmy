@@ -4,6 +4,8 @@ from __future__ import annotations
 import copy
 from collections import OrderedDict
 from typing import Any
+from immutabledict import immutabledict
+
 
 import dm_env
 import numpy as np
@@ -13,7 +15,7 @@ from gymnasium import spaces
 
 def dm_spec2gym_space(spec) -> spaces.Space[Any]:
     """Converts a dm_env spec to a gymnasium space."""
-    if isinstance(spec, (OrderedDict, dict)):
+    if isinstance(spec, (OrderedDict, dict, immutabledict)):
         return spaces.Dict(
             {key: dm_spec2gym_space(value) for key, value in copy.copy(spec).items()}
         )
