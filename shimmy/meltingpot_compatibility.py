@@ -85,9 +85,12 @@ class MeltingPotCompatibilityV0(ParallelEnv, EzPickle):
 
         # Set up PettingZoo variables
         self.render_mode = render_mode
-        self.state_space = utils.dm_spec2gym_space(
-            self._env.observation_spec()[0]["WORLD.RGB"]
-        )
+        try:
+            self.state_space = utils.dm_spec2gym_space(
+                self._env.observation_spec()[0]["WORLD.RGB"]
+            )
+        except KeyError:
+            self.state_space = None
         self._num_players = len(self._env.observation_spec())
         self.possible_agents = [
             self.PLAYER_STR_FORMAT.format(index=index)
